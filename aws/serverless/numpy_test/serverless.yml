@@ -1,0 +1,24 @@
+service: numpy-test
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: ap-northeast-1
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+    slim: true
+    zip: true
+
+functions:
+  hello:
+    handler: handler.hello
+
+package:
+  exclude:
+    - node_modules
+    - package-lock.json
