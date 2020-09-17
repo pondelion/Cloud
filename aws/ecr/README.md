@@ -18,9 +18,14 @@ $ docker build -t [repository-name] .
 4. Tagging
 
 ```
-$ docker tag test-repo1:latest ****.dkr.ecr.ap-northeast-1.amazonaws.com/test-repo1:latest
+$ docker tag [repository-name]:latest ****.dkr.ecr.ap-northeast-1.amazonaws.com/[repository-name]:latest
 ```
 
+5. Push to ECR
+
+```
+sudo docker push *****.dkr.ecr.ap-northeast-1.amazonaws.com/[repository-name]:latest
+```
 
 ---
 
