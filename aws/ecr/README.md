@@ -34,13 +34,7 @@ sudo docker push *****.dkr.ecr.ap-northeast-1.amazonaws.com/[repository-name]:la
 - Run container
 
 ```
-$ sudo docker run -it -p 5000:5000 -v $(pwd)/src:/projects test-repo1 /bin/bash
-```
-
-start web server 
-
-```
-root@78475e0191b6:/projects# python3 app.py
+$ sudo docker run -p 5000:5000 [repository-name]
 ```
 
 - Query from another terminal
